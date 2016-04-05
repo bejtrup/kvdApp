@@ -129,7 +129,9 @@ var app = {
         });
 
         $("#share").click(function(){
-            window.plugins.socialsharing.share('Message only')
+
+            var pos = textholder.val();
+            window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
         });
         
 
