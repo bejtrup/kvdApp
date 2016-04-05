@@ -192,7 +192,7 @@ var app = {
         function handleOpenURL(url) {
           var pos = url.substr(url.indexOf("/") + 2);
           alert(pos);
-          var posSplit = pos.replace("-", /\s+/g);
+          var posSplit = pos.replace("-", " ");
           textholder.val(posSplit);
           getPos();
         }
