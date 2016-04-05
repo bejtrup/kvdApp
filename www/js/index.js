@@ -133,7 +133,7 @@ var app = {
             var pos = textholder.val();
             var pos_link = pos.replace(/\s+/g, "-");
             //window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
-            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdApp://'+pos_link )
+            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'http://kvdApp://'+pos_link+'/' )
         });
 
         function makeWord(x) {
@@ -191,7 +191,6 @@ var app = {
 
         function handleOpenURL(url) {
           var pos = url.substr(url.indexOf("/") + 2);
-          alert(pos);
           var posSplit = pos.replace("-", " ");
           textholder.val(posSplit);
           getPos();
