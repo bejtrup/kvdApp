@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>kvd</title>
+    </head>
+    <body>
+
+    <div id="pan-parent">
+        <div id="crosshair">
+          <img src="img/crosshair.png" width="40" height="40">
+        </div>
+      <div id="panzoom">
+        <div id="box"></div>
+        <img  id="map" src="img/ros_kort_3300x2450_x5_6.jpg" width="3300" height="2450">
+      </div>
+    </div>
+
+    <div id="menuBottom">
+      <button id='fire'>fire!</button>
+      <input id='pos' val='Hud Karl'></input>
+      <button onclick="window.plugins.socialsharing.share('Message only')">message </button>
+      <button id='share'>del</button>
+      <button id='find'>find!</button>
+    </div>
+
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/jquery.panzoom.js"></script>
+        <script type="text/javascript" src="js/SocialSharing.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>

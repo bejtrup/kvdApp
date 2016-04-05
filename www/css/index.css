@@ -1,0 +1,64 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+html, body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+     overflow: hidden;
+}
+
+    html,body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+      .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+      #panzoom { text-align: center; margin-left: -1px; margin-top: -1px; }
+      #box { background: tomato; opacity: 0.5; width: 10px; height: 10px; position: absolute;  }
+
+#crosshair {
+  position: fixed;
+  display: block;
+  width: 40px;
+  height: 40px;
+  z-index:2;
+  left: 50%;
+  margin-left: -20px;
+  top: 0;
+  margin-top: -20px;
+}
+      
+#menuBottom {
+  position: fixed;
+  bottom: 0;
+  height: 100px;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  max-width: 100%;
+  background: gold;
+  text-align: center;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+#menuBottom h4, #menuBottom button  {
+  display: inline-block;
+  margin-left: 20px;
+}
+ #menuBottom button  {
+   margin-right: 20px;
+   margin-bottom: 20px;
+    font-size: 20px;
+ }
+ input {
+  display: inline-block;
+  width: 120px;
+  margin: 1px;
+ }
