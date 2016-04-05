@@ -38,23 +38,18 @@ html, body {
 #menuBottom {
   position: fixed;
   bottom: 0;
-  height: 100px;
+  height: 50px;
   left: 0;
   right: 0;
   z-index: 3;
   max-width: 100%;
   background: gold;
   text-align: center;
-  padding-left: 10px;
   padding-top: 10px;
 }
-#menuBottom h4, #menuBottom button  {
+ #menuBottom button  {
   display: inline-block;
   margin-left: 20px;
-}
- #menuBottom button  {
-   margin-right: 20px;
-   margin-bottom: 20px;
     font-size: 20px;
  }
  input {
