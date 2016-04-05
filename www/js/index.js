@@ -131,8 +131,9 @@ var app = {
         $("#share").click(function(){
 
             var pos = textholder.val();
+            var pos_link = pos.replace(/\s+/g, "-");
             //window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
-            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdApp://somepath?foo=bar')
+            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdApp://'+pos_link )
         });
 
         function makeWord(x) {
@@ -189,5 +190,9 @@ var app = {
         }
 
         function handleOpenURL(url) {
-          alert("received url: " + url);
+          var pos = url.substr(val.indexOf("/") + 2);
+          alert(pos);
+          var posSplit = pos.replace("-", /\s+/g);
+          textholder.val(posSplit);
+          getPos();
         }
