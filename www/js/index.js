@@ -190,7 +190,7 @@ var app = {
         }
 
         function handleOpenURL(url) {
-          var pos = url.substr(val.indexOf("/") + 2);
+          var pos = url.substr(url.indexOf("/") + 2);
           alert(pos);
           var posSplit = pos.replace("-", /\s+/g);
           textholder.val(posSplit);
