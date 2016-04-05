@@ -132,18 +132,8 @@ var app = {
 
             var pos = textholder.val();
             //window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
-            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'http://www.dmi.dk')
+            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdApp://somepath?foo=bar')
         });
-        
-
-
-
-
-
-
-
-
-
 
         function makeWord(x) {
           var x = x / 10;
@@ -196,4 +186,8 @@ var app = {
            var top = matrix[13] || matrix[5]//translate x
 
            return top
+        }
+
+        function handleOpenURL(url) {
+          alert("received url: " + url);
         }
