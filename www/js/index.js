@@ -131,9 +131,18 @@ var app = {
         $("#share").click(function(){
 
             var pos = textholder.val();
-            window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
+            //window.plugins.socialsharing.share('Jeg er her: '+ pos + ' test: <a href="www.google.dk>gogog</a>"')
+            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'http://www.dmi.dk')
         });
         
+
+
+
+
+
+
+
+
 
 
         function makeWord(x) {
