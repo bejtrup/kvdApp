@@ -132,7 +132,7 @@ var app = {
 
             var pos = textholder.val();
             var pos_link = pos.replace(/\s+/g, "-");
-            window.plugins.socialsharing.share('Jeg står i: '+ pos +'  %20%20%20%20%20%20%20%20%20%20 Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://www.bejt.dk/tag?'+pos_link);
+            window.plugins.socialsharing.share('Jeg står i: '+ pos +' ////////// Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://www.bejt.dk/tag?'+pos_link);
             
         });
 
