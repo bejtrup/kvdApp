@@ -132,7 +132,7 @@ var app = {
 
             var pos = textholder.val();
             var pos_link = pos.replace(/\s+/g, "-");
-            window.plugins.socialsharing.share('Jeg står i: '+ pos +' ////////// Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#d'+pos_link+'/');
+            window.plugins.socialsharing.share('Jeg står i: '+ pos +' ////////// Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
             
         });
 
