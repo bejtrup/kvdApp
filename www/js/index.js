@@ -136,10 +136,14 @@ var app = {
             //window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, '<a href="kvdapp://Hammer-Jern">Open my app</a>');
 
             
-            window.plugins.SmsPlugin.prototype.send('51843142', 'message');
+           sendSMS();
             
-
         });
+                function sendSMS() {
+          var sendto = '51843142';
+          var textmsg = 'nej';
+          MS.sendSMS(sendto, textmsg, function(){}, function(str){alert(str);});
+        }
 
         function makeWord(x) {
           var x = x / 10;

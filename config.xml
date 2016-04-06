@@ -30,7 +30,7 @@
   <gap:plugin name="org.apache.cordova.splashscreen"/>
 
   <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-  <gap:plugin name="info.asankan.phonegap.smsplugin" spec="0.1.0" source="pgb" />
+ <gap:plugin name="cordova-plugin-sms" source="npm" />
   <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
       <param name="URL_SCHEME" value="kvdapp" />
   </gap:plugin>
