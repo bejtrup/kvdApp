@@ -132,7 +132,10 @@ var app = {
 
             var pos = textholder.val();
             var pos_link = pos.replace(/\s+/g, "-");
-            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdapp://'+pos_link);
+            //window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, 'kvdapp://'+pos_link);
+            window.plugins.socialsharing.share('Jeg er her: '+ pos, null, null, '<a href="kvdapp://Hammer-Jern">Open my app</a>');
+            
+
         });
 
         function makeWord(x) {
