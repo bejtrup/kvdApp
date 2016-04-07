@@ -12,9 +12,16 @@
     </head>
     <body>
 
+    <div id="menu" class="menu">
+        
+    </div>
+    <div id="menubtn" class="menubtn">
+        <img src="img/app_btn_menu.svg" width="40" height="40">
+    </div>
+
     <div id="pan-parent">
         <div id="crosshair">
-          <img src="img/crosshair.png" width="40" height="40">
+          <img src="img/app_arm.svg">
         </div>
       <div id="panzoom">
         <div id="box"></div>
@@ -23,11 +30,12 @@
     </div>
 
     <div id="menuBottom">
-      <button id='fire'>fire!</button>
-      <input id='pos' val='Hud Karl'></input>
-
-      <button id='share'>del</button>
-      <button id='find'>find!</button>
+      <div id='fire'><img src="img/app_btn_get.svg" width="40" height="40"></div>
+      <div class="inputWrapper">
+        <input id='pos' val='Hud Karl'></input>
+        <div id='share'><img src="img/app_btn_share.svg" width="30" height="30"></div>
+      </div>
+      <div id='find'><img src="img/app_btn_post.svg" width="40" height="40"></div>
     </div>
 
         <script type="text/javascript" src="cordova.js"></script>
