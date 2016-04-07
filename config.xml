@@ -15,6 +15,8 @@
   <preference name="exit-on-suspend" value="false"/>
   <preference name="show-splash-screen-spinner" value="true"/>
   <preference name="auto-hide-splash-screen" value="true"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="10000"/>
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
@@ -45,7 +47,25 @@
   <icon src="www/res/icon/webos/icon-64.png" gap:platform="webos"/>
   <icon src="www/res/icon/windows-phone/icon-48.png" gap:platform="winphone"/>
   <icon src="www/res/icon/windows-phone/icon-173-tile.png" gap:platform="winphone" gap:role="background"/>
-  <gap:splash src="splash.png" />
+
+<platform name="android">
+ <splash src="splash.png" />
+
+  <!-- you can use any density that exists in the Android project -->
+  <splash src="splash.png" density="land-hdpi"/>
+  <splash src="splash.png" density="land-ldpi"/>
+  <splash src="splash.png" density="land-mdpi"/>
+  <splash src="splash.png" density="land-xhdpi"/>
+
+  <splash src="splash.png" density="port-hdpi"/>
+  <splash src="splash.png" density="port-ldpi"/>
+  <splash src="splash.png" density="port-mdpi"/>
+  <splash src="splash.png" density="port-xhdpi"/>
+</platform>
+
+  
+
+
   <gap:splash src="www/res/screen/android/screen-ldpi-portrait.png" gap:platform="android" gap:qualifier="port-ldpi"/>
   <gap:splash src="www/res/screen/android/screen-mdpi-portrait.png" gap:platform="android" gap:qualifier="port-mdpi"/>
   <gap:splash src="www/res/screen/android/screen-hdpi-portrait.png" gap:platform="android" gap:qualifier="port-hdpi"/>
