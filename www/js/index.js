@@ -281,6 +281,7 @@ sug.on("click", ".one", function(){
   wordOne = $(this).html()
     inputWordOne.val( wordOne );
     sug.html('');
+    inputWordTwo.focus();
   });
 sug.on("click", ".two", function(){
     wordOne = $(this).find(".wOne").html();

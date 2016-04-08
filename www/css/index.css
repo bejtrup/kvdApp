@@ -104,7 +104,7 @@ input {
 }
 #suggestions{
   position: absolute;
-  width: 100%;
+  width: 205px;;  
   bottom: 20px;
   left: 0;
   right: :0;
@@ -120,10 +120,13 @@ input {
   text-align: center;
   font-size: 15px !important;
   line-height: 30px;
-  display: table !important;
+  display: inline-table !important;
   margin-bottom: 10px;
   background: #FFDE85;
   margin-right: 5px;
+}
+.sugBox.one{
+  display: table !important;
 }
 .menu{
   display: none;
