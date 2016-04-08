@@ -23,6 +23,10 @@
   <gap:plugin name="org.apache.cordova.device-motion"/>
   <gap:plugin name="org.apache.cordova.device-orientation"/>
 
+  <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
+  <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
+      <param name="URL_SCHEME" value="kvdapp" />
+  </gap:plugin>
 
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <preference name="SplashScreen" value="screen"/>
@@ -33,10 +37,6 @@
 <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
 <gap:splash src="splash.png" />
 
-  <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-  <gap:plugin name="cordova-plugin-customurlscheme" source="npm">
-      <param name="URL_SCHEME" value="kvdapp" />
-  </gap:plugin>
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>
