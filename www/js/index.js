@@ -289,6 +289,7 @@ sug.on("click", ".two", function(){
     inputWordOne.val( wordOne );
     inputWordTwo.val( wordTwo );
     sug.html('')
+    getPos();
   });
 
 
