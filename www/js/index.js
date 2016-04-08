@@ -140,7 +140,7 @@ var app = {
         $("#share").click(function(){
 
             var posOne = inputWordOne.val();
-            var posTwo  inputWordTwo.val(); 
+            var posTwo = inputWordTwo.val(); 
             window.plugins.socialsharing.share('RUNE siger jeg er i : '+ posOne +' '+posTwo+'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
             
         });
@@ -231,7 +231,7 @@ var app = {
   });
 
   inputWordOne.on('blur', function(){
-    sug.html('');
+    //sug.html('');
   });
   inputWordOne.on('focus', function(){});
 
@@ -257,28 +257,39 @@ var app = {
         wordTwo = '';
       }
     }
-
   });
 
   inputWordTwo.on('blur', function(){
-    sug.html('');
+    //sug.html('');
   });
   inputWordTwo.on('focus', function(){
-    if(inputWordOne.val() == '') {
+    if(inputWordOne.val() == '' && inputWordTwo.val() == '') {
       inputWordOne.focus();
     }
   });
 
-
-
   function fillSuggetionbox(srt) {
     if(wordOne != '' && wordTwo == ''){
-      sug.prepend("<h4>"+wordOne+"</h4>");
+      sug.prepend("<div class='sugBox one'>"+wordOne+"</div>");
     }
-    if(wordTwo != ''){
-      sug.prepend("<h4>"+wordOne+" "+wordTwo+"</h4>");
+    if( wordTwo != ''){
+      sug.prepend("<div class='two'><span class='sugBox wOne'>"+wordOne+"</span> <span class='sugBox wTwo'> "+wordTwo+"</span></div>");
     }
   }
+
+sug.on("click", ".one", function(){
+  wordOne = $(this).html()
+    inputWordOne.val( wordOne );
+    sug.html('');
+  });
+sug.on("click", ".two", function(){
+    wordOne = $(this).find(".wOne").html();
+    wordTwo = $(this).find(".wTwo").html() 
+    inputWordOne.val( wordOne );
+    inputWordTwo.val( wordTwo );
+    sug.html('')
+  });
+
 
   function makeCap(str){
     var str = str.charAt(0).toUpperCase() + str.slice(1);
