@@ -12,7 +12,8 @@ html, body {
   padding:0px;
   width:100%;
   overflow: hidden;
-  font-family: verdana;
+      background: url("../splash.png");
+    background-size: cover;
 }
 
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
@@ -73,17 +74,15 @@ html, body {
 }
 input {
  display: inline-block;
-    width: 80px;
-    height: 30px;
-    border-radius: 15px;
+    width: 170px;
+    height: 38px;
     border: none;
-    margin: 5px 0 0 0;
+    margin: 0;
         text-align: left;
     vertical-align: top;
         outline: none;
     font-size: 15px;
-    background: #FFDE85;
-    text-align: center;
+    background: #F9EFBC;
 }
 #share {
   position: absolute;
@@ -97,33 +96,10 @@ input {
     background: #F9EFBC;
     vertical-align: top;
     margin: 0 5px;
-    padding: 0 40px 0 5px;
-    text-align: left;
+    padding: 0 40px 0 20px;
+        text-align: left;
     z-index: 5;
     border-radius: 20px;
-}
-#suggestions{
-  position: absolute;
-  width: 100%;
-  bottom: 20px;
-  left: 0;
-  right: :0;
-  border-radius: 20px 20px 0 0; 
-  background: #F9EFBC;
-  padding: 5px 5px 15px 5px;
-  z-index: -1;
-}
-.sugBox{
-  width: 80px;
-  border-radius: 15px;
-  height: 30px;
-  text-align: center;
-  font-size: 15px !important;
-  line-height: 30px;
-  display: table !important;
-  margin-bottom: 10px;
-  background: #FFDE85;
-  margin-right: 5px;
 }
 .menu{
   display: none;
