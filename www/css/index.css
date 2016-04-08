@@ -124,6 +124,7 @@ input {
   margin-bottom: 10px;
   background: #FFDE85;
   margin-right: 5px;
+  padding: 0;
 }
 .sugBox.one{
   display: table !important;
