@@ -121,8 +121,8 @@ var app = {
               var wordCordLeft = Math.round( nearPosLeft / scale );
               var wordCordTop = Math.round( nearPosTop / scale );
 
-              var wordTwo = makeWord( wordCordLeft );
-              var wordOne = makeWord( wordCordTop );
+               wordOne = makeWord( wordCordTop );
+               wordTwo = makeWord( wordCordLeft );
                
               inputWordOne.val( wordOne );
               inputWordTwo.val( wordTwo );  

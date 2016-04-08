@@ -129,9 +129,6 @@ input {
 .sugBox.one{
   display: table !important;
 }
-.sugBox.wOne{
-  background: #F7E0A3;
-}
 .menu{
   display: none;
 }
