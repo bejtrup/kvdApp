@@ -138,10 +138,8 @@ var app = {
         });
 
         $("#share").click(function(){
-          alert("kør");
             var posOne = inputWordOne.val();
             var posTwo = inputWordTwo.val(); 
-            alert(posOne +' '+posTwo);
             window.plugins.socialsharing.share('RUNE siger jeg er i : '+ posOne +' '+posTwo+'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
         });
 
