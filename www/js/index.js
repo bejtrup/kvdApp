@@ -203,3 +203,95 @@ var app = {
           textholder.val(posSplit);
           getPos();
         }
+
+// autocomplete 
+  var sug = $("div#suggestions");
+  inputWordOne.on("keyup", function(e){
+    var value = $(this).val();
+    sug.html('');
+    if(e.keyCode == 32 || e.keyCode == 13 ) {
+      // validate
+      inputWordTwo.focus();
+    }
+    else {
+      if(value != '' ){       
+          value = makeCap(value);
+          $(this).val(value);
+          $.each(words, function(k, v){         
+            if( v.indexOf(value) == 0 ){
+              wordOne = v;
+              fillSuggetionbox(); 
+            }
+          });       
+      }
+    }
+
+  });
+
+  inputWordOne.on('blur', function(){
+    //sug.html('');
+  });
+  inputWordOne.on('focus', function(){});
+
+
+  inputWordTwo.on("keyup", function(e){
+    var value = $(this).val();
+    sug.html('');
+    if(e.keyCode == 32 || e.keyCode == 13 ) {
+      // validate
+      inputWordTwo.focus();
+    }
+    else {
+      if(value != '' ){       
+          value = makeCap(value);
+          $(this).val(value);
+          $.each(words, function(k, v){         
+            if( v.indexOf(value) == 0 ){
+              wordTwo = v;
+              fillSuggetionbox(); 
+            }
+          });       
+      } else {
+        wordTwo = '';
+      }
+    }
+  });
+
+  inputWordTwo.on('blur', function(){
+    //sug.html('');
+  });
+  inputWordTwo.on('focus', function(){
+    if(inputWordOne.val() == '' && inputWordTwo.val() == '') {
+      inputWordOne.focus();
+    }
+  });
+
+  function fillSuggetionbox(srt) {
+    if(wordOne != '' && wordTwo == ''){
+      sug.prepend("<div class='sugBox one'>"+wordOne+"</div>");
+    }
+    if( wordTwo != ''){
+      sug.prepend("<div class='two'><span class='sugBox wOne'>"+wordOne+"</span> <span class='sugBox wTwo'> "+wordTwo+"</span></div>");
+    }
+  }
+
+sug.on("click", ".one", function(){
+  wordOne = $(this).html()
+    inputWordOne.val( wordOne );
+    sug.html('');
+    inputWordTwo.focus();
+  });
+sug.on("click", ".two", function(){
+    wordOne = $(this).find(".wOne").html();
+    wordTwo = $(this).find(".wTwo").html() 
+    inputWordOne.val( wordOne );
+    inputWordTwo.val( wordTwo );
+    sug.html('')
+    getPos();
+  });
+
+
+  function makeCap(str){
+    var str = str.charAt(0).toUpperCase() + str.slice(1);
+    return str;
+  }
