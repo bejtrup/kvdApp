@@ -20,7 +20,6 @@ html, body {
 
 #box { 
   background: tomato; 
-  opacity: 0.5; 
   width: 10px; 
   height: 10px; 
   position: absolute;  
@@ -39,12 +38,10 @@ html, body {
 }
 #crosshair img {
     position: absolute;
-    top: -10px;
-    right: 85px;
-    -ms-transform: rotate(40deg);
-    -webkit-transform: rotate(40deg);
-    transform: rotate(40deg);
-    width: 65px;
+    top: 5px;
+    right: 5px;
+    width: 50%;
+    height: 50%;
 }
 
 #menuBottom {
@@ -73,17 +70,17 @@ html, body {
 }
 input {
  display: inline-block;
-    width: 80px;
-    height: 30px;
-    border-radius: 15px;
-    border: none;
-    margin: 0;
-        text-align: left;
-    vertical-align: top;
-        outline: none;
-    font-size: 15px;
-    background: #FFDE85;
-    text-align: center;
+ width: 80px;
+ height: 30px;
+ border-radius: 15px;
+ border: none;
+ margin: 5px 0 0 0;
+ text-align: left;
+ vertical-align: top;
+ outline: none;
+ font-size: 15px;
+ background: #FFDE85;
+ text-align: center;
 } 
 
 #share {
@@ -93,16 +90,17 @@ input {
 }
 .inputWrapper {
   position: relative;
-    width: 170px;
-    height: 40px;
-    background: #F9EFBC;
-    vertical-align: top;
-    margin: 0 5px;
-    padding: 0 40px 0 20px;
-    text-align: left;
-    z-index: 5;
-    border-radius: 20px;
+  width: 170px;
+  height: 40px;
+  background: #F9EFBC;
+  vertical-align: top;
+  margin: 0 5px;
+  padding: 0 40px 0 5px;
+  text-align: left;
+  z-index: 5;
+  border-radius: 20px;
 }
+
 #suggestions{
   position: absolute;
   width: 205px;;  
@@ -135,9 +133,9 @@ input {
 }
 .menubtn{
   position: fixed;
-    top: 10px;
-    left: 10px;
-    height: 40px;
-    width: 40px;
-    z-index: 3;
+  top: 10px;
+  left: 10px;
+  height: 40px;
+  width: 40px;
+  z-index: 3;
 }
