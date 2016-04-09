@@ -198,8 +198,11 @@ var app = {
 
         function handleOpenURL(url) {
           var pos = url.substr(url.indexOf("/") + 2);
-          var posSplit = pos.replace("-", " ");
-          textholder.val(posSplit);
+          var posSplit = pos.split("-");
+          wordOne = posSplit[0];
+          wordTwo = posSplit[1];
+          inputWordOne.val(wordOne);
+          inputWordTwo.val(wordTwo);
           getPos();
         }
 
