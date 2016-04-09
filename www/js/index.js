@@ -134,7 +134,7 @@ var app = {
         $("#share").click(function(){
 
             var pos_link = "dannna annne"
-            window.plugins.socialsharing.share('NAVN siger jer er i : '+ pos +'                                         Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
+            window.plugins.socialsharing.share('NAVN siger jer er i : '+ pos_link +'                                         Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
             
         });
 
