@@ -74,7 +74,8 @@ html, body {
 input {
  display: inline-block;
     width: 80px;
-    height: 38px;
+    height: 30px;
+    border-radius: 15px;
     border: none;
     margin: 0;
         text-align: left;
@@ -83,7 +84,8 @@ input {
     font-size: 15px;
     background: #FFDE85;
     text-align: center;
-}
+} 
+
 #share {
   position: absolute;
   top: 5px;
