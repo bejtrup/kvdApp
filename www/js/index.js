@@ -56,8 +56,12 @@ var app = {
         var h = $(window).height() / 2;
         crosshair.css("top", h);
 
-        var textholder = $("#pos");
         var words = ['And','Angreb','Anke','Apparat','Arm','Bag','Balance','Ball','Balle','Ballon','Banan','Bande','Barberet','Bas','Basker','Basse','Beton','Bil','Bjarke','Blod','Blodig','Bokse','Bolle','Bord','Brand','Bror','Brun','Brød','Buks','Buks','Buller','Bunke','Bæ','Bæver','Bøjle','Bøsse','Bøtte','Cement','Chef','Chili','Chips','Corn','Creme','Dame','Damp','Daniel','Dej','Dild','Direktør','Dog','Dreng','Dressing','Drift','Dun','Durum','Dyne','Dåse','Engangs','Etøjet','Falde','Far','Fedte','Feeling','Filet','Finger','Fis','Fisk','Fiske','Fjeder','Flad','Flamme','Flæske','Fløjte','Fod','Fold','For','Forsamling','Frisk','Fyld','Fylde','Fælles','Fører','Gane','Gas','General','Giver','Glasur','Glat','Greb','Greve','Gris','Grotte','Gruppe','Græs','Gummi','Gylle','Gynge','Gæst','Gård','Halm','Hals','Hammer','Handske','Handske','Hav','Herre','Heste','Hipster','Hjelm','Hot','Hud','Hul','Hule','Hunde','Hus','Hvid','Hævner','Hønse','Hår','Inder','Indianer','Is','Jagt','Jern','Junge','Kage','Kajak','Kamel','Kammer','Kanal','Kano','Karl','Kartoffel','Kasse','Kaster','Kat','Kiosk','Klister','Kloak','Klods','Konto','Kontra','Krig','Krus','Krydder','Krølle','Kugle','Kul','Kuling','Kurv','Kutter','Kvæler','Kys','Kæde','Kæmpe','Kæp','Kød','Køle','Kølle','Køns','Lade','Lag','Lap','Lego','Leif','Lejr','Lem','Lighter','Lille','Liste','Lokum','Luft','Lugte','Lus','Læbe','Løb','Løs','Lår','Mad','Makker','Maler','Mande','Maskine','Massage','Medister','Misse','Mor','Motor','Mund','Musik','Mælke','Mørke','Nakke','Nisse','Næse','Nøgen','Okse','Ophæng','Orange','Os','Ost','Overraskelses','Parfume','Patte','Pen','Penge','Pige','Pind','Piske','Plads','Plante','Pleje','Plæne','Pop','Postej','Potte','Præmie','Pukkel','Pul','Pumpe','Pung','Pølse','Ribs','Ring','Rom','Rotte','Rulle','Runde','Ryste','Ræs','Ræve','Rød','Salat','Salt','Salve','Sans','Sex','Side','Side','Sjover','Skam','Skede','Skib','Skjuler','Sko','Skole','Skorpe','Skud','Skygge','Skæg','Skål','Slag','Slam','Slange','Slap','Slik','Smat','Smæld','Smør','So','Soft','Sol','Sort','Sovs','Spalte','Spejder','Sprække','Spyd','Stamme','Stang','Stativ','Sten','Stiv','Store','Stål','Sukker','Svamp','Svans','Sved','Svine','Svær','Søster','Søvn','Sår','Tag','Tagselv','Tand','Tank','Tarm','Tartelet','Telt','Tennis','Thai','Tisse','Tog','Toilet','Tomands','Top','Torske','Traktor','Trold','Tromme','Trommel','Trop','Træ','Træk','Trænings','Tun','Tunge','Tur','Tyk','Tyr','Tyv','Tårn','Ulve','Under','Unge','Ur','Varm','Vin','Vorte','Væske','Yngel','Yngle','Ældre','Øje','Økonomi','Øl','Gul','Lygte','Glas','Flaske','Gigolo','Sofa','Pude','Plastik','Serviet','Skærm','Stof','Uld','Filt','Denim','Guld','Sølv','Velour','Slæde','Garn','Metal','Vand','Dun'];
+
+        var inputWordOne = $("input#wordOne");
+        var inputWordTwo = $("input#wordTwo");
+        var wordOne = '';
+        var wordTwo = '';
 
         $("#panzoom").panzoom();
         $("#panzoom").panzoom("pan", -1175, -800, { relative: true });
@@ -133,9 +137,9 @@ var app = {
 
         $("#share").click(function(){
 
-            var pos = textholder.val();
-            var pos_link = pos.replace(/\s+/g, "-");
-            window.plugins.socialsharing.share('NAVN siger jer er i : '+ pos +'                                         Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
+            var posOne = inputWordOne.val();
+            var posTwo = inputWordTwo.val(); 
+            window.plugins.socialsharing.share('RUNE siger jeg er i : '+ posOne +' '+posTwo+'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
             
         });
 
