@@ -139,10 +139,9 @@ var app = {
         });
 
         $("#share").click(function(){
-
-            var pos_link = "dannna annne"
-            window.plugins.socialsharing.share('NAVN siger jer er i : '+ pos_link +'                                         Åben Kvdapp for at finde mig, eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
-            
+            var posOne = inputWordOne.val();
+            var posTwo = inputWordTwo.val(); 
+            window.plugins.socialsharing.share('RUNE siger jeg er i : '+ posOne +' '+posTwo+'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
         });
 
         function makeWord(x) {
