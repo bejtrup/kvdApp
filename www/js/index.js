@@ -216,7 +216,7 @@ var app = {
     else {
       if(value != '' ){       
           value = makeCap(value);
-          $(this).val(value);
+          $(this).val( $.trim(value) );
           $.each(words, function(k, v){         
             if( v.indexOf(value) == 0 ){
               wordOne = v;
@@ -244,7 +244,7 @@ var app = {
     else {
       if(value != '' ){       
           value = makeCap(value);
-          $(this).val(value);
+          $(this).val( $.trim(value) );
           $.each(words, function(k, v){         
             if( v.indexOf(value) == 0 ){
               wordTwo = v;
