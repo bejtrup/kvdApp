@@ -71,21 +71,18 @@ var app = {
 
         function getPos(){
 
-           var value = textholder.val().split(/\s+/);
-           wordTop = getWord(value[0])*10;
-           wordLeft = getWord(value[1])*10;
+           WordOne = $.trim( inputWordOne.val()) ;
+           WordTwo = $.trim( inputWordTwo.val()) ;
+
+           wordTop = getWord(WordOne)*10;
+           wordLeft = getWord(WordTwo)*10;
 
            var scale = getScale();
-
           if(wordTop >= 0 && wordLeft >= 0 ) {
              $("#box").css({
                   top: wordTop ,
                   left: wordLeft 
                 });
-             } else {
-               alert("Du for stiv!");
-             }
-
              var posLeft = crosshair.position().left;
              var posTop = crosshair.position().top; 
 
@@ -93,7 +90,11 @@ var app = {
              var y = (-1*wordTop + posTop ) - 4;
 
              $("#panzoom").panzoom("setMatrix", [ 1, 0, 0, 1, x, y ], { animate: true, relative: false });
-        }
+        
+          } else {
+               alert("Du for stiv!");
+          }
+}
 
         function fire(){
            var scale = getScale();
@@ -121,10 +122,11 @@ var app = {
               var wordCordLeft = Math.round( nearPosLeft / scale );
               var wordCordTop = Math.round( nearPosTop / scale );
 
-              var wordLeft = makeWord( wordCordLeft );
-              var wordTop = makeWord( wordCordTop );
-                
-              textholder.val( wordTop + " " + wordLeft );
+               wordOne = makeWord( wordCordTop );
+               wordTwo = makeWord( wordCordLeft );
+               
+              inputWordOne.val( wordOne );
+              inputWordTwo.val( wordTwo ); 
         }
 
 
