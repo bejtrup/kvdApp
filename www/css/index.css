@@ -38,8 +38,8 @@ html, body {
 }
 #crosshair img {
     position: absolute;
-    top: 17px;
-    right: 17px;
+    top: 20px;
+    right: 20px;
     width: 180px;
 }
 
