@@ -214,6 +214,11 @@ var app = {
 
 // autocomplete 
   var sug = $("div#suggestions");
+  
+  inputWordOne.on("click", function(){
+    $(this).select();
+  });
+
   inputWordOne.on("keyup", function(e){
     var value = $(this).val();
     sug.html('');
@@ -241,6 +246,9 @@ var app = {
   });
   inputWordOne.on('focus', function(){});
 
+  inputWordTwo.on("click", function(){
+    $(this).select();
+  });
 
   inputWordTwo.on("keyup", function(e){
     var value = $(this).val();

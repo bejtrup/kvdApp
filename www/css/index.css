@@ -143,33 +143,38 @@ input {
 
 #suggestions{
   position: absolute;
-  width: 100%;  
   bottom: 20px;
-  left: 0;
-  right: :0;
-  border-radius: 20px 20px 0 0; 
+  left: -2px;
+  right: -2px;
+  border-radius: 10px 10px 0 0; 
   background: #fff;
-  padding: 5px 40px 0 5px;
+  padding: 5px 40px 10px 5px;
   z-index: -1;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;  
+    border: solid 2px #160438;
+    border-bottom: none;
+    z-index: -2;
 }
 .sugBox{
   width: 48%;
-  border-radius: 15px;
+  border-radius: 7px;
   height: 30px;
   text-align: center;
   font-size: 15px !important;
   line-height: 30px;
   display: inline-table !important;
   margin-bottom: 10px;
-  background: #FFDE85;
-  margin-right: 5px;
+  background: #F5EFDE;
   padding: 0;
 }
 .sugBox.one{
   display: table !important;
+}
+.two {
+  display: block;
+  width: 102%
 }
 .menu{
   display: none;
