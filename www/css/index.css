@@ -38,9 +38,17 @@ html, body {
 }
 #crosshair img {
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 20px;
-    width: 180px;
+}
+.runePeep {
+    position: absolute;
+    left: -16px;
+    margin-top: -45%;
+    z-index: 10;
+}
+.runePeep img{
+  width: 100%;
 }
 
 #menuBottom {
