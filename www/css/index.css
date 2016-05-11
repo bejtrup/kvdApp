@@ -1,3 +1,7 @@
+@font-face {
+    font-family: HVD;
+    src: url(HVD_Poster_Clean.ttf);
+}
 
 * {
   -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
@@ -12,17 +16,20 @@ html, body {
   padding:0px;
   width:100%;
   overflow: hidden;
-  font-family: verdana;
+  font-family: HVD,"HVD",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 #panzoom { text-align: center; margin-left: -1px; margin-top: -1px; }
 
 #box { 
-  background: tomato; 
+
   width: 10px; 
   height: 10px; 
   position: absolute;  
+
+      background: #FFD53D;
+      box-shadow: inset 0 0 0px 2px #000;
 }
 
 #crosshair {
@@ -36,10 +43,19 @@ html, body {
   top: 0;
   margin-top: -20px;
 }
+/*div#crosshair:before {
+    content: '';
+    position: absolute;
+    background: gold;
+    width: 2px;
+    height: 2px;
+    left: 19px;
+    top: 19px;
+  }*/
 #crosshair img {
     position: absolute;
-    top: 12px;
-    right: 20px;
+    top: 10px;
+    right: 19px;
 }
 .runePeep {
     position: absolute;
@@ -83,13 +99,13 @@ html, body {
   height: 34px;
   background: #fff;
   vertical-align: top;
-  padding: 0 40px 0 5px;
+  padding: 0 5px 0 5px;
   text-align: left;
   z-index: 5;
   border-radius: 10px;
   left: 60px;
-  top: 0;
-  right: 60px;
+  top: 5px;
+  right: 98px;
   border: solid 2px #160438;
 }
 .inputWrapper:after 
@@ -123,22 +139,24 @@ content: '';
 input {
   display: inline-block;
     width: 48%;
-    height: 23px;
+    height: 25px;
     border-radius: 7px;
     border: none;
-    margin: 5px 0 0 0;
+    margin: 0;
     text-align: left;
     vertical-align: top;
     outline: none;
     font-size: 15px;
-    background: #F5EFDE;
+    background: #FFEEB1;
     text-align: center;
+    font-family: HVD,"HVD",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    box-shadow: inset 0 -3px 0 rgba(191, 160, 46 , 0.2);
 } 
 
 #share {
   position: absolute;
-  top: 7px;
-  right: 7px;
+  top: -7px;
+  right: -40px;
 }
 
 #suggestions{
@@ -148,8 +166,7 @@ input {
   right: -2px;
   border-radius: 10px 10px 0 0; 
   background: #fff;
-  padding: 5px 40px 10px 5px;
-  z-index: -1;
+  padding: 10px 5px;
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
   box-sizing: border-box;  
@@ -166,8 +183,9 @@ input {
   line-height: 30px;
   display: inline-table !important;
   margin-bottom: 10px;
-  background: #F5EFDE;
+  background: #FFEEB1;
   padding: 0;
+  box-shadow: inset 0 -3px 0 rgba(191, 160, 46 , 0.2);
 }
 .sugBox.one{
   display: table !important;
@@ -177,8 +195,38 @@ input {
   width: 102%
 }
 .menu{
-  display: none;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  padding: 10px;
+  background: #E65199;
+  z-index: 10000;
+  -webkit-transition: left 0.5s; /* Safari */
+  transition: left 0.5s;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;  
 }
+
+.menu.out {
+  left:0!important;
+}
+
+.menu .head img{
+    margin: 0;
+    display: table;
+    right: 10px;
+    position: absolute;
+}
+.menu .body {
+  
+}
+.menu .footer {
+  
+}
+
 .menubtn{
   position: fixed;
   top: 10px;
@@ -187,3 +235,8 @@ input {
   width: 40px;
   z-index: 3;
 }
+
+.clickEffect {
+ transition: all .1s ease-in-out; 
+}
+.clickEffect:active { transform: scale(0.9); }
