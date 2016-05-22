@@ -119,34 +119,46 @@ var app = {
               var nearPosTop = (parseInt(realPosTop / z) * z);
               var nearPosLeft = (parseInt(realPosLeft / z) * z);
 
-               $("#box").css({
-                 top: nearPosTop / scale ,
-                 left: nearPosLeft / scale 
-               });
+
 
           //     var text = $('#panzoom').getTransform();
               var wordCordLeft = Math.round( nearPosLeft / scale );
               var wordCordTop = Math.round( nearPosTop / scale );
 
-               wordOne = makeWord( wordCordTop );
+              
+              if(wordCordTop >= 0 && wordCordTop < 2450 && wordCordLeft >= 0 && wordCordLeft < 3300 ) {
+               $("#box").css({
+                 top: nearPosTop / scale ,
+                 left: nearPosLeft / scale 
+               });
+                
+                wordOne = makeWord( wordCordTop );
                wordTwo = makeWord( wordCordLeft );
                
               inputWordOne.val( wordOne );
               inputWordTwo.val( wordTwo ); 
+                
+              } else {
+                 alert("neh");              
+            }
+
         }
 
 
         $("#fire").click(function(){
             fire();
+            sug.html('');
         });
 
         $("#find").click(function(){
             getPos();
+            sug.html('');
         });
 
         $("#share").click(function(){
             var pos_link = wordOne+"-"+wordTwo;
             window.plugins.socialsharing.share('RUNE siger jeg er i : '+ pos_link +'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver lidt net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
+            sug.html('');
         });
 
         function makeWord(x) {
