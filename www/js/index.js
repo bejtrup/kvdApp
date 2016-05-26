@@ -63,7 +63,15 @@ var app = {
         });
 
 
-        var words = ['And','Angreb','Anke','Apparat','Arm','Bag','Balance','Ball','Kartoffel','Ballon','Banan','Bande','Kul','Lille','Basker','Kano','Beton','Bil','Konto','Krus','Mad','Bokse','Pen','Blind','Gynge','Bror','Brun','Brød','Bast','Buks','Hus','Bunke','Misse','Potte','Bøjle','Musik','Bøtte','Mor','Chef','Chili','Chips','Corn','Creme','Kajak','Damp','Os','Kontra','Dild','Direktør','Dog','Dreng','Dressing','Drift','Dun','Durum','Dyne','Dåse','Engangs','Etøjet','Falde','Far','Fedte','Feeling','Filet','Finger','Fis','Fisk','Fiske','Fjeder','Flad','Flamme','Flæske','Fløjte','Svær','Fold','For','Stød','Frisk','Fjeder','Fylde','Fælles','Fører','Gane','Gas','General','Svine','Glasur','Glat','Greb','Tisse','Gris','Grotte','Gruppe','Sved','Gummi','Gylle','Brand','Gæst','Sprække','Tyr','Hals','Hammer','Handske','Handske','Hav','Smat','Heste','Hipster','Hjelm','Hot','Hud','Hul','Hule','Trolde','Buller','Svans','Hævner','Hønse','Hår','Svamp','Indianer','Tunge','Tyk','Jern','Junge','Kage','Dame','Kamel','Kammer','Kanal','Basse','Karl','Balle','Kasse','Kaster','Tomands','Stram','Klister','Kloak','Klods','Bjarke','Dej','Krig','Blod','Krydder','Krølle','Kugle','Barberet','Kuling','Kurv','Kutter','Kvæler','Kys','Kæde','Kæmpe','Kæp','Kød','Sex','Kølle','Køns','Pavillon','Tog','Skam','Leg','Øje','Lejr','Lem','Uld','Bas','Liste','Lokum','Luft','Lugte','Lus','Læbe','Løb','Løs','Lag','Blodig','Skede','Dele','Mande','Maskine','Massage','Medister','Bæ','Charlatan','Thai','Mund','Bøsse','Mælke','Mørke','Nakke','Nisse','Næse','Nøgen','Okse','Ophæng','Orange','Daniel','Ost','Overraskelses','Parfume','Patter','Bolle','Penge','Pige','Spyd','Piske','Pølse','Plante','Pleje','Plæne','Mis','Postej','Bæver','Præmie','Pukkel','Pul','Pumpe','Pung','Piller','Ribs','Ring','Rom','Rotte','Rulle','Sår','Ryste','Ræs','Ræve','Rød','Salat','Salt','Salve','Sans','Køle','Side','Sigøjner','Sjover','Lap','Makker','Skib','Skjuler','Sko','Skole','Skorpe','Skud','Skygge','Skæg','Skål','Slag','Slam','Slange','Slap','Slik','Herre','Smæld','Smør','So','Soft','Sol','Sort','Sovs','Spalte','Spejder','Gård','Pind','Stamme','Stang','Stativ','Kiosk','Stiv','Store','Stål','Sukker','Inder','Hvid','Græs','Giver','Fod','Søster','Søvn','Runde','Tag','Tagselv','Tand','Tank','Tarm','Tartelet','Telt','Tennis','Motor','Greve','Lår','Toilet','Plastik','Top','Torske','Traktor','Hunde','Tromme','Trommel','Trop','Træ','Træk','Trænings','Tun','Is','Tur','Jagt','Halm','Tyv','Tårn','Ulve','Under','Unge','Ur','Varm','Vin','Vorte','Væske','Yngel','Yngle','Ældre','Leif','Økonomi','Øl','Gul','Lygte','Glas','Flaske','Gigolo','Sofa','Pude','Kat','Serviet','Skærm','Stof','Lighter','Filt','Denim','Guld','Sølv','Velour','Slæde','Garn','Metal','Vand','Dun'];
+        var words = ['And','Angreb','Anke','Apparat','Arm','Bag','Balance','Ball','Kartoffel','Ballon','Banan','Bande','Kul','Lille','Basker','Kano','Beton','Bil','Konto','Krus','Mad','Bokse','Pen','Blind','Gynge','Bror','Brun','Brød','Bast','Buks','Hus','Bunke','Misse','Potte','Bøjle','Musik','Bøtte','Mor','Chef','Chili','Chips','Corn','Creme','Kajak','Damp','Os','Kontra','Dild','Direktør','Dog','Dreng','Dressing','Drift','isme','Durum','Dyne','Dåse','Engangs','Etøjet','Falde','Far','Fedte','Feeling','Filet','Finger','Fis','Fisk','Fiske','Fjeder','Flad','Flamme','Flæske','Fløjte','Svær','Fold','For','Stød','Frisk','Fjeder','Fylde','Fælles','Fører','Gane','Gas','General','Svine','Glasur','Glat','Greb','Tisse','Gris','Grotte','Gruppe','Sved','Gummi','Gylle','Brand','Gæst','Sprække','Tyr','Hals','Hammer','Handske','Handske','Hav','Smat','Heste','Hipster','Hjelm','Hot','Hud','Hul','Hule','Trolde','Buller','Svans','Hævner','Hønse','Hår','Svamp','Indianer','Tunge','Tyk','Jern','Junge','Kage','Dame','Kamel','Kammer','Kanal','Basse','Karl','Balle','Kasse','Kaster','Tomands','Stram','Klister','Kloak','Klods','Bjarke','Dej','Krig','Blod','Krydder','Krølle','Kugle','Barberet','Kuling','Kurv','Kutter','Kvæler','Kys','Kæde','Kæmpe','Kæp','Kød','Sex','Kølle','Køns','Pavillon','Tog','Skam','Leg','Øje','Lejr','Lem','Uld','Bas','Liste','Lokum','Luft','Lugte','Lus','Læbe','Løb','Løs','Lag','Blodig','Skede','Dele','Mande','Maskine','Massage','Medister','Bæ','Charlatan','Thai','Mund','Bøsse','Mælke','Mørke','Nakke','Nisse','Næse','Nøgen','Okse','Ophæng','Orange','Daniel','Ost','Overraskelses','Parfume','Patter','Bolle','Penge','Pige','Spyd','Piske','Pølse','Plante','Pleje','Plæne','Mis','Postej','Bæver','Præmie','Pukkel','Pul','Pumpe','Pung','Piller','Ribs','Ring','Rom','Rotte','Rulle','Sår','Ryste','Ræs','Ræve','Rød','Salat','Salt','Salve','Sans','Køle','Side','Sigøjner','Sjover','Lap','Makker','Skib','Skjuler','Sko','Skole','Skorpe','Skud','Skygge','Skæg','Skål','Slag','Slam','Slange','Slap','Slik','Herre','Smæld','Smør','So','Soft','Sol','Sort','Sovs','Spalte','Spejder','Gård','Pind','Stamme','Stang','Stativ','Kiosk','Stiv','Store','Stål','Sukker','Inder','Hvid','Græs','Giver','Fod','Søster','Søvn','Runde','Tag','Tagselv','Tand','Tank','Tarm','Tartelet','Telt','Tennis','Motor','Greve','Lår','Toilet','Plastik','Top','Torske','Traktor','Hunde','Tromme','Trommel','Trop','Træ','Træk','Trænings','Tun','Is','Tur','Jagt','Halm','Tyv','Tårn','Ulve','Under','Unge','Ur','Varm','Vin','Vorte','Væske','Yngel','Yngle','Ældre','Leif','Økonomi','Øl','Gul','Lygte'];
+
+//,'Glas','Flaske','Gigolo','Sofa','Pude','Kat','Serviet','Skærm','Stof','Lighter','Filt','Denim','Guld','Sølv','Velour','Slæde','Garn','Metal','Vand','Dun'
+
+          var suggestionsWordone = [];
+          $.each(words, function(k, v){
+                  suggestionsWordone.push(v);
+          });
+          suggestionsWordone.sort();
 
         var inputWordOne = $("input#wordOne");
         var inputWordTwo = $("input#wordTwo");
@@ -83,12 +91,11 @@ var app = {
            wordTop = getWord(WordOne)*10;
            wordLeft = getWord(WordTwo)*10;
 
-           var scale = getScale();
-          if(wordTop >= 0 && wordLeft >= 0 ) {
+          if(wordTop >= 0 && wordTop < 2450 && wordLeft >= 0 && wordLeft <3300) {
              $("#box").css({
                   top: wordTop ,
                   left: wordLeft 
-                });
+             });
              var posLeft = crosshair.position().left;
              var posTop = crosshair.position().top; 
 
@@ -98,7 +105,12 @@ var app = {
              $("#panzoom").panzoom("setMatrix", [ 1, 0, 0, 1, x, y ], { animate: true, relative: false });
         
           } else {
-               alert("Du for stiv!");
+               inputWordOne.val('');
+               inputWordTwo.val('');
+               sug.html('');
+               WordOne = '';
+               WordTwo = '';
+               //alert("Du for stiv!");
           }
 }
 
@@ -131,7 +143,7 @@ var app = {
                  top: nearPosTop / scale ,
                  left: nearPosLeft / scale 
                });
-                
+
                 wordOne = makeWord( wordCordTop );
                wordTwo = makeWord( wordCordLeft );
                
@@ -139,7 +151,7 @@ var app = {
               inputWordTwo.val( wordTwo ); 
                 
               } else {
-                 alert("neh");              
+                 //alert("neh");              
             }
 
         }
@@ -229,6 +241,9 @@ var app = {
   
   inputWordOne.on("click", function(){
     $(this).select();
+    if(inputWordTwo.val() == ''){
+      wordTwo = '';
+    }
   });
 
   inputWordOne.on("keyup", function(e){
@@ -242,10 +257,12 @@ var app = {
       if(value != '' ){       
           value = makeCap(value);
           $(this).val( $.trim(value) );
-          $.each(words, function(k, v){         
+          $.each(suggestionsWordone, function(k, v){         
             if( v.indexOf(value) == 0 ){
-              wordOne = v;
-              fillSuggetionbox(); 
+              if(k<=244){
+                wordOne = v;
+               fillSuggetionbox(); 
+              }
             }
           });       
       }
@@ -273,7 +290,7 @@ var app = {
       if(value != '' ){       
           value = makeCap(value);
           $(this).val( $.trim(value) );
-          $.each(words, function(k, v){         
+          $.each(suggestionsWordone, function(k, v){         
             if( v.indexOf(value) == 0 ){
               wordTwo = v;
               fillSuggetionbox(); 
