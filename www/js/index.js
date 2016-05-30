@@ -229,7 +229,7 @@ var app = {
         function handleOpenURL(url) {
           var pos = url.substr(url.indexOf("/") + 2);
           var posSplit = pos.split("-");
-          alert(wordOne+" - "+ wordTwo);
+          alert(posSplit[0]+" - "+ posSplit[1]);
           wordOne = posSplit[0];
           wordTwo = posSplit[1];
           inputWordOne.val(wordOne);
