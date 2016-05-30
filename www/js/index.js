@@ -169,7 +169,7 @@ var app = {
 
         $("#share").click(function(){
             var pos_link = wordOne+"-"+wordTwo;
-            window.plugins.socialsharing.share('RUNE siger jeg er i : '+ pos_link +'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver lidt net) ', null, null, 'http://bejtrup.github.io/tag/#'+pos_link+'/');
+            window.plugins.socialsharing.share('RUNE siger jeg er i : '+ pos_link +'                                         Åben RUNE appen for at finde mig eller brug dette link (linket kræver lidt net) ', null, null, 'http://www.runeapp.dk/#'+pos_link+'/');
             sug.html('');
         });
 
