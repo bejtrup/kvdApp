@@ -99,7 +99,7 @@ html, body {
   height: 34px;
   background: #fff;
   vertical-align: top;
-  padding: 0 5px 0 5px;
+  padding: 0 5px;
   text-align: left;
   z-index: 5;
   border-radius: 10px;
@@ -136,9 +136,13 @@ content: '';
     left: 9px;
 }
 
+.inputwrapper{
+  width: 45%;
+}
+
 input {
-  display: inline-block;
-    width: 47%;
+    display: inline-block;
+    float: left;
     height: 25px;
     border-radius: 7px;
     border: none;
@@ -152,6 +156,17 @@ input {
     font-family: HVD,"HVD",Arial,"Helvetica Neue",Helvetica,sans-serif;
     box-shadow: inset 0 -3px 0 rgba(191, 160, 46 , 0.2);
 } 
+
+#wordOne{
+  width: 100%;
+  max-width: 100%;
+}
+#wordTwo{
+  width: 45%;
+  position: absolute;
+  right: 5px;
+  max-width: 45%;
+}
 
 #share {
   position: absolute;
@@ -220,7 +235,7 @@ input {
     margin: 0;
     display: table;
     right: 10px;
-    top:10px;
+    top:20px;
     position: absolute;
 }
 .menu .body {
@@ -235,7 +250,7 @@ input {
 
 .menubtn{
   position: fixed;
-  top: 10px;
+  top: 20px;
   left: 10px;
   height: 40px;
   width: 40px;
