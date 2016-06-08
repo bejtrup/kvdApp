@@ -1,6 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="dk.rune.www" version="1.1.0">
   <name>RUNE</name>
   <description>RUNE på roskilde</description>
+  <preference name="phonegap-version" value="3.5.0" />
   <author href="http://Runeapp.dk" email="bejtrup@gmail.com">Rune app</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
@@ -43,7 +44,7 @@
 
   <gap:plugin name="org.apache.cordova.splashscreen"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="5000"/>
+  <preference name="SplashScreenDelay" value="3000"/>
   <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
   <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
   <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
