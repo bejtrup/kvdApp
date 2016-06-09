@@ -20,8 +20,17 @@ html, body {
   background: #FFDC6D;
 }
 
+.iframe {
+  width: 500px;
+  height: 500px;
+}
+
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
-#panzoom { text-align: center; margin-left: -1px; margin-top: -1px; }
+#panzoom { 
+  text-align: center; 
+  margin-left: -1px; 
+  margin-top: -1px; 
+}
 
 #box { 
 

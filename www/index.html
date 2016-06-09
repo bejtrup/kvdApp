@@ -6,6 +6,7 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://msn.com"> 
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>RUNE</title>
@@ -43,8 +44,8 @@
     <div id="menubtn" class="menubtn">
         <img src="img/rune_menu.png" width="40" height="40" class="clickEffect">
     </div>
-
-    <div id="pan-parent" style="width:100%;height:100%;overflow:scroll !important;-webkit-overflow-scrolling:touch !important">>
+<!-- 
+    <div id="pan-parent">
         <div id="runePeep" class="runePeep"  style="width: 140px;">
             <img src="img/rune_screen3.png">
         </div>
@@ -55,6 +56,10 @@
         <div id="box"></div>
         <img  id="map" src="img/kort.png" width="3300" height="2450">
       </div>
+    </div> -->
+
+    <div style="width:100%; height: 100%;"> <!-- set desired position and size to that div -->
+        <canvas id="mycanvas" style="width: 100%; height: 100%;"></canvas>
     </div>
 
     <div id="menuBottom">
@@ -76,11 +81,16 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.panzoom.js"></script>
+        <script type="text/javascript" src="js/img-touch-canvas.js"></script>
         <script type="text/javascript" src="js/SocialSharing.js"></script>
         <script type="text/javascript" src="js/LaunchMyApp.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
-
+    <script>
+        var gesturableImg = new ImgTouchCanvas({
+            canvas: document.getElementById('mycanvas'),
+            path: "img/kort.png"
+        });
+    </script>
         <script type="text/javascript">
             app.initialize();
         </script>
