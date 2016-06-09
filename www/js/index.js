@@ -167,8 +167,7 @@ var app = {
         });
 
         $("#share").click(function(){
-            var pos_link = wordOne+"-"+wordTwo;
-            window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+pos_link+'/');
+            window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+$.trim(wordOne)+"-"+$.trim(wordTwo)+'/');
             sug.html('');
         });
 
