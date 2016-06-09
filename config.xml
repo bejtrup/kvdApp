@@ -1,4 +1,4 @@
-<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="dk.rune.www" version="1.2.2">
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="dk.rune.www" version="1.2.3">
   <name>Rune</name>
   <description>Rune på roskilde</description>
 
@@ -17,8 +17,9 @@
   <preference name="disable-cursor" value="false"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="android-installLocation" value="auto"/>
+  <preference name="DisallowOverscroll" value="true" />
+  <plugin name="com.kumbe.phonegap.zoom.zoomcontrol" spec="0.1.3" source="pgb" />
 
-  <preference name="EnableViewportScale" value="true" />
 
   <gap:plugin name="org.apache.cordova.console"/>
   <gap:plugin name="org.apache.cordova.device"/>
