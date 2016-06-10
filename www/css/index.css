@@ -29,10 +29,19 @@ html, body {
   padding: 0; 
   position: absolute; 
   width: 1px; }
+  #pan-parent{
+    overflow: scroll;
+
+  }
 #panzoom { 
+  position: relative;
   text-align: center; 
   margin-left: -1px; 
   margin-top: -1px; 
+}
+
+#map{
+  margin: 400px 200px;
 }
 
 #box { 

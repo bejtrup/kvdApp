@@ -55,6 +55,8 @@ var app = {
 
         var h = $(window).height();
         var w = $(window).width();
+        $("#pan-parent").css("height", h);
+        $("#pan-parent").css("width", w);
         crosshair.css("top", h/2);
         $("#crosshair img").css("width", w/2.3).show();
         $("#runePeep").css({
@@ -65,6 +67,8 @@ var app = {
         var words = ['And','Angreb','Anke','Apparat','Arm','Bag','Balance','Balle','Kartoffel','Ballon','Banan','Bande','Kul','Lille','Basker','Kano','Beton','Bil','Konto','Krus','Mad','Bokse','Pen','Blind','Gynge','Bror','Brun','Brød','Bast','Buks','Hus','Bunke','Misse','Potte','Bøjle','Musik','Bøtte','Mor','Chef','Chili','Chips','Corn','Creme','Kajak','Damp','Os','Kontra','Dild','Direktør','Dog','Slæde','Dressing','Drift','isme','Durum','Dyne','Dåse','Filt','Genert','Falde','Juice','Fedte','Feeling','Filet','Finger','Fis','Fisk','Fiske','Fjeder','Flad','Flamme','Flæske','Fløjte','Svær','Fold','Fræk','Stød','Frisk','Fjeder','Fylde','Fars','Fører','Gane','Gas','General','Svine','Glasur','Glat','Greb','Tisse','Gris','Grotte','Gruppe','Sved','Gummi','Gylle','Brand','Gæst','Sprække','Tyr','Hals','Hammer','Los','Handske','Hav','Smat','Heste','Hipster','Hjelm','Hot','Hud','Hul','Hule','Trolde','Buller','Svans','Hævner','Hønse','Hår','Svamp','Indianer','Tunge','Tyk','Jern','Junge','Kage','Dame','Kamel','Kammer','Kanal','Basse','Karl','Fælles','Kasse','Kaster','Knold','Stram','Klister','Kloak','Klods','Bjarke','Dej','Krig','Blod','Krydder','Krølle','Kugle','Barberet','Kuling','Kurv','Kutter','Kvæler','Kys','Kæde','Kæmpe','Kæp','Kød','Sex','Kølle','Kost','Pavillon','Tog','Skam','Leg','Øje','Lejr','Lem','Uld','Bas','Liste','Lokum','Luft','Lugte','Lus','Læbe','Løb','Løs','Lag','Blodig','Skede','Dele','Mande','Maskine','Massage','Medister','Bæ','Charlatan','Thai','Mund','Bøsse','Mælke','Metal','Nakke','Nisse','Næse','Nøgen','Okse','Ophæng','Orange','Daniel','Ost','Glide','Parfume','Patter','Bolle','Penge','Pige','Spyd','Piske','Pølse','Plante','Pleje','Plæne','Mis','Postej','Bæver','Præmie','Pukkel','Pul','Pumpe','Pung','Piller','Ribs','Ring','Rom','Rotte','Rulle','Sår','Ryste','Ræs','Ræve','Rød','Salat','Salt','Salve','Sans','Køle','Side','Sigøjner','Sjover','Lap','Makker','Skib','Skjuler','Sko','Skole','Skorpe','Skud','Skygge','Skæg','Skål','Slag','Slam','Slange','Slap','Slik','Herre','Smæld','Smør','So','Soft','Sol','Sort','Sovs','Spalte','Spejder','Gård','Pind','Stamme','Stang','Stativ','Kiosk','Stiv','Store','Stål','Sukker','Inder','Hvid','Græs','Giver','Fod','Søster','Søvn','Runde','Tag','Tagselv','Tand','Tank','Tarm','Tartelet','Telt','Tennis','Motor','Greve','Lår','Toilet','Plastik','Top','Torske','Traktor','Hunde','Tromme','Trommel','Trop','Træ','Træk','Trænings','Tun','Is','Tur','Jagt','Halm','Tyv','Tårn','Ulve','Under','Unge','Ur','Varm','Vin','Vorte','Væske','Yngel','Yngle','Ældre','Leif','Økonomi','Øl','Gul','Lygte'];
 
 //,'Glas','Flaske','Gigolo','Sofa','Pude','Kat','Serviet','Skærm','Stof','Lighter','Filt','Denim','Guld','Sølv','Velour','Dreng','Garn','Mørke','Vand','Dun' DOLK
+var AEOEAAwords = ['Slæde','Flæske','Svær','Fræk','Gæst','Sprække','Hævner','Fælles','Kvæler','Kæde','Kæmpe','Kæp','Læbe','Bæ','Mælke','Næse','Ophæng','Plæne','Bæver','Præmie','Ræs','Ræve','Skæg','Smæld','Græs','Træ','Træk','Trænings','Væske','Brød','Bøjle','Bøtte','Direktør','Fløjte','Stød','Fører','Hønse','Krølle','Kød','Kølle','Løb','Løs','Bøsse','Nøgen','Pølse','Rød','Køle','Sigøjner','Smør','Søster','Søvn','Dåse','Hår','Sår','Skål','Gård','Stål','Lår','Tårn','Ældre','Øje','Økonomi','Øl'];
+var AEOEAAwordsTranslate = ['Slaede','Flaeske','Svaer','Fraek','Gaest','Spraekke','Haevner','Faelles','Kvaeler','Kaede','Kaempe','Kaep','Laebe','Bae','Maelke','Naese','Ophaeng','Plaene','Baever','Praemie','Raes','Raeve','Skaeg','Smaeld','Graes','Trae','Traek','Traenings','Vaeske','Broed','Boejle','Boette','Direktoer','Floejte','Stoed','Foerer','Hoense','Kroelle','Koed','Koelle','Loeb','Loes','Boesse','Noegen','Poelse','Roed','Koele','Sigoejner','Smoer','Soester','Soevn','Daase','Haar','Saar','Skaal','Gaard','Staal','Laar','Taarn','aeldre','oeje','oekonomi','oel'];
 
           var suggestionsWordone = []
           $.each(words, function(k, v){
@@ -72,25 +76,28 @@ var app = {
           });
           suggestionsWordone.sort();
 
+          $("#pan-parent").scrollTop(1075); 
+          $("#pan-parent").scrollLeft(1350); 
+
         var inputWordOne = $("input#wordOne");
         var inputWordTwo = $("input#wordTwo");
         var wordOne = '';
         var wordTwo = '';
+        var minT = 400;
+        var maxT = 2450 + 400;
+        var minL = 200;
+        var maxL = 3300 + 200;
 
-        $("#panzoom").panzoom();
-        $("#panzoom").panzoom("pan", -1175, -800, { relative: true });
-
-        //$("#panzoom").panzoom { width: 100%; height: 100%; }
 
         function getPos(){
 
            WordOne = $.trim( inputWordOne.val()) ;
            WordTwo = $.trim( inputWordTwo.val()) ;
 
-           wordTop = getWord(WordOne)*10;
-           wordLeft = getWord(WordTwo)*10;
+           wordTop = (getWord(WordOne)*10)+400;
+           wordLeft = (getWord(WordTwo)*10)+200;
 
-          if(wordTop >= 0 && wordTop < 2450 && wordLeft >= 0 && wordLeft <3300) {
+          if(wordTop >= minT && wordTop < maxT && wordLeft >= minL && wordLeft < maxL) {
              $("#box").css({
                   top: wordTop ,
                   left: wordLeft 
@@ -101,7 +108,13 @@ var app = {
              var x = (-1*wordLeft + posLeft) - 4 ;
              var y = (-1*wordTop + posTop ) - 4;
 
-             $("#panzoom").panzoom("setMatrix", [ 1, 0, 0, 1, x, y ], { animate: true, relative: false });
+             //$("#panzoom").panzoom("setMatrix", [ 1, 0, 0, 1, x, y ], { animate: true, relative: false });
+             var top = (wordTop - posTop) ;
+             var left = (wordLeft - posLeft) ;
+
+             //$("#pan-parent").scrollTop(top);
+             //$("#pan-parent").scrollLeft(left);
+             $("#pan-parent").animate({ scrollTop: top, scrollLeft: left  }, 600);
         
           } else {
                inputWordOne.val('');
@@ -114,37 +127,38 @@ var app = {
 }
 
         function fire(){
-           var scale = getScale();
+           //var scale = getScale();
            
            var posLeft = crosshair.position().left;
            var posTop = crosshair.position().top; 
               
-              var mapLeft = $("#map").position().left;
-              var mapTop = $("#map").position().top; 
-               
+              var mapLeft = $("#panzoom").position().left;
+              var mapTop = $("#panzoom").position().top; 
+              
                var realPosLeft = posLeft - mapLeft;
                var realPosTop = posTop - mapTop;
 
-              
+              var scale = 1;
               var z = 10 * scale;
               var nearPosTop = (parseInt(realPosTop / z) * z);
               var nearPosLeft = (parseInt(realPosLeft / z) * z);
 
-
-
           //     var text = $('#panzoom').getTransform();
               var wordCordLeft = Math.round( nearPosLeft / scale );
               var wordCordTop = Math.round( nearPosTop / scale );
-
               
-              if(wordCordTop >= 0 && wordCordTop < 2450 && wordCordLeft >= 0 && wordCordLeft < 3300 ) {
+              if(wordCordTop >= minT && wordCordTop < maxT && wordCordLeft >= minL && wordCordLeft < maxL ) {
                $("#box").css({
                  top: nearPosTop / scale ,
                  left: nearPosLeft / scale 
                });
 
-                wordOne = makeWord( wordCordTop );
-               wordTwo = makeWord( wordCordLeft );
+               var wT = wordCordTop - 400;
+               var wL = wordCordLeft - 200;
+
+
+                wordOne = makeWord( wT);
+               wordTwo = makeWord( wL );
                
               inputWordOne.val( wordOne );
               inputWordTwo.val( wordTwo ); 
@@ -154,7 +168,6 @@ var app = {
             }
 
         }
-
 
         $("#fire").click(function(){
             fire();
@@ -167,7 +180,12 @@ var app = {
         });
 
         $("#share").click(function(){
-            window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+$.trim(wordOne)+"-"+$.trim(wordTwo)+'/');
+            var shareOne = checkWordAndTranslate($.trim(wordOne));
+            var shareTwo = checkWordAndTranslate($.trim(wordTwo));
+
+            alert(shareOne+"-"+shareTwo);
+
+            window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+shareOne+"-"+shareTwo+'/');
             sug.html('');
         });
 
@@ -344,4 +362,14 @@ $("#close").on('click', function(){
   function makeCap(str){
     var str = str.charAt(0).toUpperCase() + str.slice(1);
     return str;
+  }
+
+  function checkWordAndTranslate(word){
+     var inA = $.inArray(word, AEOEAAwords);
+     if(inA > -1 ) {
+          return AEOEAAwordsTranslate[inA];
+     } else {
+          return word;
+     }
+
   }
