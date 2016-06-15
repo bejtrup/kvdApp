@@ -5,7 +5,8 @@
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=medium-dpi" />
+         <!-- <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" /> -->
 
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>RUNE</title>
@@ -64,8 +65,10 @@
       <div class="inputWrapper">
             <div id="suggestions"></div>
             <div class="inputwrapper">
-                <input id='wordOne' value=''></input>
-                <input id='wordTwo' value=''></input>
+                <div class="inputColor">
+                  <input id='wordOne' value=''></input>
+                  <input id='wordTwo' value=''></input>
+                </div>
             </div>
             <div id='share'><img src="img/rune_share.png" width="42" height="42"></div>
       </div>
@@ -76,7 +79,7 @@
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery.panzoom.js"></script>
+   <!--      <script type="text/javascript" src="js/jquerypanzoommin.js"></script> -->
         <script type="text/javascript" src="js/SocialSharing.js"></script>
         <script type="text/javascript" src="js/LaunchMyApp.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
