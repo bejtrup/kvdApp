@@ -159,7 +159,7 @@ content: '';
 }
 
 .inputwrapper{
-  width: 45%;
+  width: 48%;
 }
 
 input {
@@ -176,15 +176,17 @@ input {
     background: #FFEEB1;
     text-align: center;
     font-family: HVD,"HVD",Arial,"Helvetica Neue",Helvetica,sans-serif;
-    box-shadow: inset 0 -3px 0 rgba(191, 160, 46 , 0.2);
-} 
+      box-shadow: inset 0 -3px 0 rgba(191, 160, 46 , 0.2);
+      padding: 0;
+      margin: 0;
+    } 
 
 #wordOne{
   width: 100%;
   max-width: 100%;
 }
 #wordTwo{
-  width: 45%;
+  width: 48%;
   position: absolute;
   right: 5px;
   max-width: 45%;
