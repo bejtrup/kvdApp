@@ -234,9 +234,8 @@ var AEOEAAwordsTranslate = ['Slaede','Flaeske','Svaer','Fraek','Gaest','Spraekke
         function handleOpenURL(url) {
           var pos = url.substr(url.indexOf("/") + 2);
           var posSplit = pos.split("-");
-          //alert(posSplit[0]+" - "+ posSplit[1]);
-          wordOne = posSplit[0];
-          wordTwo = posSplit[1];
+          wordOne = checkWordAndTranslateBack($.trim(posSplit[0]));
+          wordTwo = checkWordAndTranslateBack($.trim(posSplit[1]));
           inputWordOne.val(wordOne);
           inputWordTwo.val(wordTwo);
           getPos();
@@ -361,4 +360,12 @@ $("#close").on('click', function(){
           return word;
      }
 
+  }
+  function checkWordAndTranslateBack(word){
+     var innA = $.inArray(word, AEOEAAwordsTranslate);
+     if(innA > -1 ) {
+          return AEOEAAwords[inA];
+     } else {
+          return word;
+     }
   }
