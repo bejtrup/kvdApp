@@ -157,6 +157,7 @@ var AEOEAAwordsTranslate = ['Slaede','Flaeske','Svaer','Fraek','Gaest','Spraekke
 
         }
 
+
         $("#fire").click(function(){
             fire();
             sug.html('');
@@ -174,6 +175,8 @@ var AEOEAAwordsTranslate = ['Slaede','Flaeske','Svaer','Fraek','Gaest','Spraekke
             window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+shareOne+"-"+shareTwo+'/');
             sug.html('');
         });
+
+
 
         function makeWord(x) {
           var x = x / 10;
@@ -348,4 +351,14 @@ $("#close").on('click', function(){
   function makeCap(str){
     var str = str.charAt(0).toUpperCase() + str.slice(1);
     return str;
+  }
+
+  function checkWordAndTranslate(word){
+     var inA = $.inArray(word, AEOEAAwords);
+     if(inA > -1 ) {
+          return AEOEAAwordsTranslate[inA];
+     } else {
+          return word;
+     }
+
   }
