@@ -364,7 +364,7 @@ $("#close").on('click', function(){
   function checkWordAndTranslateBack(word){
      var innA = $.inArray(word, AEOEAAwordsTranslate);
      if(innA > -1 ) {
-          return AEOEAAwords[inA];
+          return AEOEAAwords[innA];
      } else {
           return word;
      }
