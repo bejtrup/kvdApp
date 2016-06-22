@@ -172,7 +172,7 @@ var AEOEAAwordsTranslate = ['Slaede','Flaeske','Svaer','Fraek','Gaest','Spraekke
             var shareOne = checkWordAndTranslate($.trim(wordOne));
             var shareTwo = checkWordAndTranslate($.trim(wordTwo));
 
-            window.plugins.socialsharing.share('Rune påstår jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+shareOne+"-"+shareTwo+'/');
+            window.plugins.socialsharing.share('Rune siger jeg er i : '+ wordOne+","+wordTwo +'. Åbn Rune-appen for at finde mig eller brug dette link (linket kræver lidt data) ', null, null, 'http://www.runeapp.dk/#'+shareOne+"-"+shareTwo+'/');
             sug.html('');
         });
 
